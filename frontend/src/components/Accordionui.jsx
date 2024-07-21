@@ -5,34 +5,31 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export function Accordionui() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleChange = (panel) => (isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
-
+export function Accordionui({ title, description, expanded, handleChange, panel }) {
   return (
-    <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={(_, isExpanded) => handleChange('panel1')(isExpanded)}>
+    <div
+      className='h-auto rounded-3xl'
+      style={{
+        boxShadow: expanded === panel ? '0px 4px 20px rgba(255, 165, 0, 0.5)' : '0px 4px 20px rgba(0, 0, 0, 0.1)',
+        transition: 'box-shadow 0.3s ease',
+      }}
+    >
+      <Accordion expanded={expanded === panel} onChange={handleChange(panel)}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
+          aria-controls={`${panel}bh-content`}
+          id={`${panel}bh-header`}
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+            <h1 className='font-bold'>{title}</h1>
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+            {description}
           </Typography>
         </AccordionDetails>
       </Accordion>
-      {/* Add other Accordions here */}
     </div>
   );
 }

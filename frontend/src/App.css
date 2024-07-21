@@ -1,0 +1,35 @@
+/* InputBox.css */
+input[type='range'] {
+    -webkit-appearance: none; /* Override default styles for WebKit browsers */
+    appearance: none; /* Override default styles */
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px; /* Set thumb width */
+    height: 32px; /* Set thumb height */
+    background: white; /* Set thumb color */
+    border-radius: 35%; /* Make thumb circular */
+    border: 2px solid #95928e; /* Optional: Thumb border */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  input[type='range']::-moz-range-thumb {
+    width: 32px; /* Set thumb width */
+    height: 32px; /* Set thumb height */
+    background: white; /* Set thumb color */
+    border-radius: 50%; /* Make thumb circular */
+    border: 2px solid #FFA500; /* Optional: Thumb border */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  input[type='range']::-ms-thumb {
+    width: 32px; /* Set thumb width */
+    height: 32px; /* Set thumb height */
+    background: white; /* Set thumb color */
+    border-radius: 50%; /* Make thumb circular */
+    border: 2px solid #FFA500; /* Optional: Thumb border */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
