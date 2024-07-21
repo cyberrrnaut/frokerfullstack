@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
@@ -23,18 +24,32 @@ export function Footer() {
        </div>
        </a>
       
-       <div className='flex' >
+      <Link to={'/about-us'}>
+      <div className='flex' >
         <img className='size-4' src="https://res.cloudinary.com/dapbrn8a9/image/upload/q_auto:low/v1706009705/Frokerassets/arrow_wxeel0.jpg" alt="" />
         <h1 className='text-xl'> About us </h1>
        </div>
+      
+      </Link>
+       
+
+       <Link to={'/privacy-policy'}>
        <div className='flex' >
         <img className='size-4' src="https://res.cloudinary.com/dapbrn8a9/image/upload/q_auto:low/v1706009705/Frokerassets/arrow_wxeel0.jpg" alt="" />
         <h1 className='text-xl'> Privacy policy</h1>
        </div>
-       <div className='flex' >
+       
+       </Link>
+      
+
+      <Link to={'/terms-and-conditions'}> 
+      <div className='flex' >
         <img className='size-4' src="https://res.cloudinary.com/dapbrn8a9/image/upload/q_auto:low/v1706009705/Frokerassets/arrow_wxeel0.jpg" alt="" />
         <h1 className='text-xl'> Terms & Conditions</h1>
        </div>
+      
+      </Link>
+      
 
        </div>
        <div>

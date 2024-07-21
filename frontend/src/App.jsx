@@ -1,44 +1,33 @@
 
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Pageone } from './pages/Pageone';
-import { Pagetwo } from './pages/Pagetwo';
-import { Pagethree } from './pages/Pagethree';
-import { Pagefour } from './pages/Pagefour';
-import { Pagefive } from './pages/Pagefive';
-import { Pagesix } from './pages/Pagesix';
 import { Footer } from './components/Footer';
-import { Pageseven } from './pages/Pageseven';
-import { Pageeight } from './pages/pageeight';
-
-
+import { Aboutus } from './pages/Aboutus';
+import Homepage from './pages/Homepage'; // Ensure this is correctly imported
+import { Privacypolicy } from './pages/Privacypolicy';
+import { Termsncondition } from './pages/Termsncondition';
+import { Froker } from './pages/Froker';
+import { Blogs } from './pages/Blogs';
 
 function App() {
   return (
     <Router>
       <Navbar />
-
-      <Pageone />
-        
-        <Pagetwo />
-        <Pagethree/>
-        <Pagefour/>
-        <Pagefive/>
-        <Pagesix/>
-         <Pageseven/>
-         <Pageeight/>
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/about-us' element={<Aboutus />} />
+        <Route  path='/privacy-policy' element={<Privacypolicy/>}/>
+        <Route  path='/terms-and-conditions' element={<Termsncondition/>}/>
+        <Route  path='/blogs' element={<Blogs/>}/>
+        <Route  path='/froker' element={<Froker/>}/>
 
 
-      <Routes >
-
-      
-        
 
       </Routes>
-
-       <Footer/>
+      <Footer />
     </Router>
   );
 }
 
-export default App
+export default App;
+
