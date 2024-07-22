@@ -6,7 +6,13 @@ import mainRouter from "./routes/index.route.js"
 
 const app = express();
 
-app.arguments('api/v1',mainRouter);
+
+app.get('/whoami',(req,res)=>{
+   res.json({message: Hey});
+})
+
+
+app.use('api/v1',mainRouter);
 
 
 app.get()
