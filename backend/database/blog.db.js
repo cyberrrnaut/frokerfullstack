@@ -7,8 +7,10 @@ const blogSchema = new mongoose.Schema({
     author: { type: String, required: true },
     date: { type: String, required: true },
     description: { type: String, required: true },
+    liked: { type: Boolean, default: false },
+    likeCount: { type: Number, default: 0 }
 });
 
-const Blog = mongoose.model('Blog', blogSchema);  // will become blogs
+const Blog = mongoose.model('Blog', blogSchema);
 
 export default Blog;

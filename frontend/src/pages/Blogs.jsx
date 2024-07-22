@@ -1,4 +1,5 @@
 import { BlogPageone } from "./BlogPageone";
+import { BlogPagetwo } from "./BlogPagetwo";
 
 
 export function Blogs() {
@@ -6,6 +7,7 @@ export function Blogs() {
     <div className="pt-28">
       
       <BlogPageone/>
+      <BlogPagetwo/>
 
       
     </div>
