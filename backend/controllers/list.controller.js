@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {   // api/v1/list?id=3
       return res.json(blogs);
     } 
 
-      const blog = await Blog.findById(id);
+      const blog = await Blog.find({id:id});
 
       if (!blog) {
         return res.status(404).json({ message: 'Blog not found' });
