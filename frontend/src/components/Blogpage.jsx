@@ -46,14 +46,32 @@ export function Blogpage() {
   }
 
   return (
-    <div className='pt-28'>
-      {blog.image && (
-        <img src={blog.image} alt={blog.title} />
-      )}
-      <h1>{blog.title}</h1>
+    <div>
+
+
+   
+    <div className='pt-28 flex flex-col items-center' >
+
+      <div>
+      <div className='flex'><h1 className='text-lg'>{"Blog>"}</h1>
+      <h1 className='text-lg'>{blog.title}</h1> </div>
+      
+        <img className='rounded-3xl' src={blog.image} alt={blog.title} />
+
+      </div>
+       
+      
+    </div>
+
+    <div className='flex justify-end mr-72 mt-4'>
+        <button type='button'> Like</button>
+       </div>
+    
+      
       <p>{blog.author}</p>
       <p>{blog.date}</p>
       <p>{blog.description}</p>
+
     </div>
   );
 }
