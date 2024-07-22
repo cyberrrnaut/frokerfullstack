@@ -8,6 +8,7 @@ import { Privacypolicy } from './pages/Privacypolicy';
 import { Termsncondition } from './pages/Termsncondition';
 import { Froker } from './pages/Froker';
 import { Blogs } from './pages/Blogs';
+import { Blogpage } from './components/Blogpage';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route  path='/privacy-policy' element={<Privacypolicy/>}/>
         <Route  path='/terms-and-conditions' element={<Termsncondition/>}/>
         <Route  path='/blogs' element={<Blogs/>}/>
+        
+        <Route path='/blogs/:id' element={<Blogpage />} /> 
+
+
         <Route  path='/froker' element={<Froker/>}/>
 
 
