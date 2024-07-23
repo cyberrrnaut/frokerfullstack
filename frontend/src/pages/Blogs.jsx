@@ -7,7 +7,7 @@ export function Blogs() {
     <div className="pt-28">
       
       <BlogPageone/>
-      <BlogPagetwo/>
+      <BlogPagetwo title={`Recent Posts`}/>
 
       
     </div>

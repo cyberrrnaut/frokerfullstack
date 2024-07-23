@@ -9,6 +9,7 @@ import { Termsncondition } from './pages/Termsncondition';
 import { Froker } from './pages/Froker';
 import { Blogs } from './pages/Blogs';
 import { Blogpage } from './components/Blogpage';
+import { BlogRecentpage } from './pages/BlogRecentpage';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route  path='/terms-and-conditions' element={<Termsncondition/>}/>
         <Route  path='/blogs' element={<Blogs/>}/>
         
-        <Route path='/blogs/:id' element={<Blogpage />} /> 
+        <Route path='/blogs/:id' element={<BlogRecentpage />} /> 
 
 
         <Route  path='/froker' element={<Froker/>}/>

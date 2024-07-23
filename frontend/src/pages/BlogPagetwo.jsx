@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 
 
-export function BlogPagetwo() {
+export function BlogPagetwo({title}) {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
@@ -36,7 +36,7 @@ export function BlogPagetwo() {
   return (
     <div className="pt-10">
     <div className="container mx-auto px-4 py-8 ">
-      <h1 className="text-4xl   mb-8">Recent Posts</h1>
+      <h1 className="text-4xl   mb-8">{title}</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {currentBlogs.map((blog) => (
